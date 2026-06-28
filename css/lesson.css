@@ -1,0 +1,1328 @@
+@charset "UTF-8";
+
+/* ===========================
+RESET
+=========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    background:#081321;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+Common
+=========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:120px 0;
+
+}
+
+h2{
+
+    font-size:3rem;
+
+    color:#d4af37;
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+    letter-spacing:4px;
+
+}
+
+p{
+
+    font-size:1.1rem;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:15px 40px;
+
+    border:1px solid #d4af37;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    letter-spacing:2px;
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    background:#d4af37;
+
+    color:#081321;
+
+}
+
+/* ===========================
+Loading
+=========================== */
+
+#loading{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#081321;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.loading-content{
+
+    text-align:center;
+
+}
+
+.loading-content img{
+
+    width:120px;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+Particles
+=========================== */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+
+    0 0 10px white,
+
+    0 0 20px #8fd8ff,
+
+    0 0 35px #8fd8ff;
+
+}
+
+/* ===========================
+Header
+=========================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:
+
+    rgba(8,19,33,.65);
+
+    backdrop-filter:blur(15px);
+
+}
+
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+#logo-img{
+
+    width:160px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:28px;
+
+}
+
+nav a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#d4af37;
+
+}
+
+/* ===========================
+Hero
+=========================== */
+
+.lesson-hero{
+
+    height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.lesson-hero img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    animation:
+
+    heroZoom 18s linear infinite;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    rgba(0,0,0,.35);
+
+}
+
+.hero-content{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:
+
+    translate(-50%,-50%);
+
+    width:90%;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.hero-subtitle{
+
+    color:#d4af37;
+
+    letter-spacing:6px;
+
+    margin-bottom:20px;
+
+}
+
+#hero-title{
+
+    font-size:
+
+    clamp(4rem,8vw,8rem);
+
+    font-weight:300;
+
+    text-shadow:
+
+    0 2px 8px rgba(0,0,0,.8);
+
+}
+
+.gold-line{
+
+    width:0;
+
+    height:2px;
+
+    background:#d4af37;
+
+    margin:35px auto;
+
+    box-shadow:
+
+    0 0 10px #d4af37,
+
+    0 0 20px #d4af37;
+
+}
+
+.hero-text{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:1.2rem;
+
+    line-height:2;
+
+}
+
+@keyframes heroZoom{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1.12);
+
+    }
+
+}
+/* ===========================
+Lesson Card
+=========================== */
+
+.lesson-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:35px;
+
+}
+
+.lesson-card{
+
+    background:
+    rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    transition:.5s;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.lesson-card:hover{
+
+    transform:
+    translateY(-12px);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.4);
+
+}
+
+.lesson-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:1s;
+
+}
+
+.lesson-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.lesson-info{
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+.lesson-info h3{
+
+    color:#d4af37;
+
+    font-size:1.8rem;
+
+    margin-bottom:15px;
+
+}
+
+.price{
+
+    font-size:2rem;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+}
+
+.lesson-info p{
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+Aya Lumière
+=========================== */
+
+.chef-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.chef-image{
+
+    flex:1;
+
+}
+
+.chef-image img{
+
+    width:100%;
+
+    max-width:450px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35);
+
+    transition:.8s;
+
+}
+
+.chef-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.chef-text{
+
+    flex:1;
+
+}
+
+.chef-text h2{
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+}
+
+.chef-sub{
+
+    color:#d4af37;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+}
+
+.chef-text p{
+
+    margin-bottom:20px;
+
+    line-height:2;
+
+}
+
+/* ===========================
+Lesson Flow
+=========================== */
+
+.flow-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.flow-card{
+
+    background:
+    rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:40px 25px;
+
+    transition:.4s;
+
+}
+
+.flow-card:hover{
+
+    transform:
+    translateY(-10px);
+
+}
+
+.flow-card span{
+
+    display:inline-block;
+
+    font-size:3rem;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+.flow-card h3{
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+Instagram
+=========================== */
+
+.lesson-instagram{
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+
+    rgba(255,255,255,.02),
+
+    rgba(255,255,255,.05)
+
+    );
+
+}
+
+.lesson-instagram p{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+Contact
+=========================== */
+
+.lesson-contact{
+
+    text-align:center;
+
+}
+
+.lesson-contact h2{
+
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+}
+
+.lesson-contact p{
+
+    font-size:1.3rem;
+
+    margin-bottom:20px;
+
+}
+/* ===========================
+Footer
+=========================== */
+
+footer{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    border-top:
+    1px solid rgba(255,255,255,.1);
+
+    background:#06101b;
+
+}
+
+.footer-logo{
+
+    width:100px;
+
+    margin-bottom:20px;
+
+}
+
+footer h3{
+
+    color:#d4af37;
+
+    font-size:2rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+
+}
+
+.footer-nav{
+
+    margin:35px 0;
+
+}
+
+.footer-nav a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    margin:0 18px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+}
+
+.footer-nav a:hover{
+
+    color:#d4af37;
+
+}
+
+.copyright{
+
+    color:#999;
+
+    font-size:.9rem;
+
+}
+
+/* ===========================
+Reveal Animation
+=========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+    translateY(80px);
+
+    transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+/* ===========================
+Glass Reflection
+=========================== */
+
+.lesson-card,
+.flow-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.lesson-card::before,
+.flow-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-60%;
+
+    width:45%;
+
+    height:400%;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.35),
+
+    transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1.2s;
+
+}
+
+.lesson-card:hover::before,
+.flow-card:hover::before{
+
+    left:140%;
+
+}
+
+/* ===========================
+Crystal Particles
+=========================== */
+
+@keyframes floatParticle{
+
+    0%{
+
+        transform:
+        translateY(0)
+        scale(.4);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    80%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(-600px)
+        scale(1.2);
+
+        opacity:0;
+
+    }
+
+}
+
+.particle{
+
+    animation:
+    floatParticle linear infinite;
+
+}
+
+/* ===========================
+Gold Line
+=========================== */
+
+.gold-line.active{
+
+    animation:
+    lineGrow 2s forwards;
+
+}
+
+@keyframes lineGrow{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:450px;
+
+    }
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1100px){
+
+    .lesson-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .flow-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    #hero-title{
+
+        font-size:2.8rem;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:.9rem;
+
+        letter-spacing:3px;
+
+    }
+
+    .hero-text{
+
+        font-size:1rem;
+
+    }
+
+    .lesson-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .chef-container{
+
+        flex-direction:column;
+
+    }
+
+    .chef-image{
+
+        text-align:center;
+
+    }
+
+    .chef-image img{
+
+        max-width:320px;
+
+    }
+
+    .chef-text{
+
+        text-align:center;
+
+    }
+
+    .chef-text h2{
+
+        text-align:center;
+
+    }
+
+    .flow-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    nav ul{
+
+        gap:12px;
+
+        font-size:.8rem;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .footer-nav{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:12px;
+
+    }
+
+    .footer-nav a{
+
+        margin:0;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    #logo-img{
+
+        width:120px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        max-width:280px;
+
+        text-align:center;
+
+    }
+
+    .lesson-contact h2{
+
+        font-size:2.5rem;
+
+    }
+
+}
+/* ===========================
+Hero Text Animation
+=========================== */
+
+.char{
+
+    display:inline-block;
+
+    opacity:0;
+
+    transform:translateX(-30px);
+
+    animation:
+    charFade .8s forwards;
+
+}
+
+@keyframes charFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+
+    }
+
+}
+
+.desc-char{
+
+    display:inline-block;
+
+    opacity:0;
+
+    transform:
+    translateX(-20px);
+
+    animation:
+    descFade .8s forwards;
+
+}
+
+@keyframes descFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+
+    }
+
+}
+/* ===========================
+Crystal Divider
+=========================== */
+
+.crystal-divider{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:30px;
+
+    opacity:0;
+
+    transition:2s;
+
+}
+
+.crystal-divider.active{
+
+    opacity:1;
+
+}
+
+.line-left,
+.line-right{
+
+    width:120px;
+
+    height:1px;
+
+    background:#d4af37;
+
+    box-shadow:
+    0 0 10px #d4af37;
+
+}
+
+.crystal{
+
+    margin:0 20px;
+
+    color:#d4af37;
+
+    font-size:1.2rem;
+
+    text-shadow:
+
+    0 0 10px #d4af37,
+
+    0 0 20px white;
+
+}
+/* ===========================
+Crystal Particle Motion
+=========================== */
+
+#particles{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:0;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 0 8px #ffffff,
+        0 0 18px #9fdcff,
+        0 0 30px #9fdcff;
+
+    animation:
+        floatCrystal linear infinite;
+
+}
+
+@keyframes floatCrystal{
+
+    0%{
+
+        transform:
+            translateY(120px)
+            scale(.3);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    85%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-700px)
+            scale(1.2);
+
+        opacity:0;
+
+    }
+
+}
+/* ===========================
+Glass Reflection
+=========================== */
+
+.lesson-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.5s;
+
+    transform-style:preserve-3d;
+
+}
+
+.glass-shine{
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-60%;
+
+    width:50%;
+
+    height:400%;
+
+    background:
+
+    linear-gradient(
+
+        rgba(255,255,255,0),
+
+        rgba(255,255,255,.35),
+
+        rgba(255,255,255,0)
+
+    );
+
+    transform:
+
+        rotate(25deg);
+
+    animation:
+
+        shineMove 6s linear infinite;
+
+}
+
+@keyframes shineMove{
+
+    0%{
+
+        left:-60%;
+
+    }
+
+    100%{
+
+        left:170%;
+
+    }
+
+}
+
+
+.lesson-card:hover{
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.35),
+
+        0 0 30px rgba(212,175,55,.25);
+
+}
