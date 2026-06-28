@@ -1,0 +1,674 @@
+@charset "UTF-8";
+/* =====================
+   RESET
+===================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#05111f;
+
+    color:#fff;
+
+    font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+    line-height:2;
+
+    overflow-x:hidden;
+}
+
+/* =====================
+   HEADER
+===================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:25px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:
+    rgba(3,10,20,.75);
+
+    backdrop-filter:blur(15px);
+
+    z-index:999;
+}
+
+.logo a{
+
+    text-decoration:none;
+
+    color:#d4af37;
+
+    font-size:1.3rem;
+
+    letter-spacing:3px;
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    margin-left:30px;
+
+    letter-spacing:2px;
+
+    transition:.4s;
+}
+
+nav a:hover{
+
+    color:#d4af37;
+}
+
+/* =====================
+   HERO
+===================== */
+
+.about-hero{
+
+    height:70vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("img/top1.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.hero-content{
+
+    text-align:center;
+
+    z-index:10;
+}
+
+.subtitle{
+
+    color:#d4af37;
+
+    letter-spacing:6px;
+
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+
+    font-size:4rem;
+
+    font-weight:300;
+
+    letter-spacing:3px;
+
+    text-shadow:
+    0 0 20px rgba(255,255,255,.2);
+}
+
+/* =====================
+   COMMON
+===================== */
+
+.section{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:120px 0;
+}
+
+h2{
+
+    font-size:3rem;
+
+    font-weight:300;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+    letter-spacing:3px;
+}
+
+.gold-line{
+
+    width:120px;
+    height:2px;
+
+    background:
+    linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    transparent);
+
+    margin-bottom:40px;
+}
+
+.center{
+
+    margin:
+    20px auto 60px;
+}
+
+/* =====================
+   STORY
+===================== */
+
+.story{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+}
+
+.story img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    display:block;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.5);
+
+    transition:.6s;
+}
+
+.story img:hover{
+
+    transform:
+    scale(1.03);
+}
+
+.story-text p{
+
+    margin-bottom:25px;
+
+    color:#ddd;
+}
+
+/* =====================
+   CHEF
+===================== */
+
+.chef{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+}
+
+.chef h3{
+
+    color:white;
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+}
+
+.chef p{
+
+    margin-bottom:20px;
+
+    color:#ddd;
+}
+
+.chef img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    display:block;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.5);
+
+    transition:.6s;
+}
+
+.chef img:hover{
+
+    transform:
+    scale(1.03);
+}
+
+/* =====================
+   GLASS EFFECT
+===================== */
+
+.story-text,
+.chef-text{
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    padding:50px;
+
+    border-radius:20px;
+}
+
+/* =====================
+   CAREER
+===================== */
+
+.career{
+
+    text-align:center;
+}
+
+.timeline{
+
+    max-width:800px;
+
+    margin:auto;
+}
+
+.timeline-item{
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    border-left:
+    3px solid #d4af37;
+
+    text-align:left;
+
+    background:
+    rgba(255,255,255,.03);
+
+    border-radius:10px;
+}
+
+.timeline-item span{
+
+    color:#d4af37;
+
+    font-size:1.3rem;
+
+    display:block;
+
+    margin-bottom:10px;
+}
+
+/* =====================
+   AWARD
+===================== */
+
+.award{
+
+    text-align:center;
+}
+
+.award-box{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+}
+
+.award-item{
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    transition:.4s;
+}
+
+.award-item:hover{
+
+    transform:
+    translateY(-10px);
+
+    border-color:#d4af37;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    border-top:
+    1px solid rgba(255,255,255,.1);
+
+    color:#aaa;
+}
+
+/* =====================
+   SCROLL ANIMATION
+===================== */
+
+.reveal-left,
+.reveal-right{
+
+    opacity:0;
+
+    transition:1.4s;
+}
+
+.reveal-left{
+
+    transform:
+    translateX(-100px);
+}
+
+.reveal-right{
+
+    transform:
+    translateX(100px);
+}
+
+.reveal-left.active,
+.reveal-right.active{
+
+    opacity:1;
+
+    transform:
+    translateX(0);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media(max-width:900px){
+
+    .story,
+    .chef{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .hero-content h1{
+
+        font-size:2.5rem;
+    }
+
+    nav{
+
+        display:none;
+    }
+
+    h2{
+
+        font-size:2rem;
+    }
+
+    .story-text,
+    .chef-text{
+
+        padding:30px;
+    }
+}
+#particles{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+.sparkle{
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:
+    sparkle 8s linear infinite;
+
+    box-shadow:
+    0 0 10px white,
+    0 0 20px white;
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        transform:
+        translateY(100vh);
+
+        opacity:0;
+    }
+
+    10%{
+
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+        translateY(-100px);
+
+        opacity:0;
+    }
+
+}
+.luxury-title{
+
+    overflow:hidden;
+}
+
+.luxury-title span{
+
+    opacity:0;
+
+    display:inline-block;
+
+    transform:
+    translateY(30px);
+
+    transition:1s;
+}
+
+.luxury-title.active span{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+}
+.gold-line{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.gold-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-200px;
+
+    width:120px;
+    height:100%;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.9),
+    transparent
+    );
+
+    animation:
+    goldShine 4s infinite;
+}
+
+@keyframes goldShine{
+
+    100%{
+
+        left:300px;
+    }
+
+}
+.glass-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+}
+
+.glass-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:50%;
+    height:100%;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.35),
+    transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation:
+    glassMove 6s infinite;
+
+    z-index:10;
+}
+
+@keyframes glassMove{
+
+    100%{
+
+        left:180%;
+    }
+
+}
+.luxury-name{
+
+    position:relative;
+
+    display:inline-block;
+}
+
+.luxury-name::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-10px;
+
+    left:50%;
+
+    transform:
+    translateX(-50%);
+
+    width:80px;
+    height:1px;
+
+    background:#d4af37;
+}
+.about-hero{
+
+    background-attachment:fixed;
+}
