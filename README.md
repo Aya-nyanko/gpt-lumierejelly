@@ -1,2 +1,1 @@
-# gpt-lumierejelly
-gptでの作成途中クリスタルケーキ
+https://aya-nyanko.github.io/gpt-lumierejelly/
